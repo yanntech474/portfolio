@@ -170,22 +170,12 @@ header{
 }
 .home-container .home-img{
     position: relative;
-    width: 500px;
-    height: 500px;
-    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: var(--box-shadoww);
-    transition: .5s ease;
 }
 .home-container .home-img img{
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: var(--box-shadoww);
+    width: 90%;
+    transform: translate(0,0);
 }
-.home-container .home-img:hover{
-    transform: scale(1.05);
-}
+
 .home .scroll-down{
     color: var(--first-color);
     font-size: var(--normal-font-size);
@@ -200,8 +190,8 @@ header{
 }
 @keyframes arrow-down {
     0% { transform: translateY(0); }
-    50% { transform: translateY(10px); }
-    100% { transform: translateY(0); }
+    30% { transform: translateY(10px); }
+   
 }   
 
     
@@ -211,7 +201,29 @@ header{
         justify-content: center;
         align-items: center;
     }
-    
+    .section{
+        position: relative;
+        width: 1150px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 6rem 2rem 2rem;
+    }
+    .sub-section{
+        position: relative;
+        width: 1150px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 6rem 0;
+    }
+    .section-title-01{
+        font-size: 4.5em;
+        font-weight: 800;
+        margin-bottom: 2rem;
+        background: linear-gradient(to top,transparent 0%, var(--first-color) 70%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        opacity: .1;
+    }
     /*======Scroll bar colors=====*/
 
     
