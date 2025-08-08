@@ -81,7 +81,10 @@ header {
     backdrop-filter: blur(20px);
     transition: .6 ease;
 }
-
+header.sticky{
+    background: rgba(255, 255, 255,0.1 );
+    box-shadow: var(--box-shadoww);
+}
 .nav-bar {
     position: relative;
     height: calc(4rem + 1rem);
@@ -93,6 +96,9 @@ header {
     margin-right: auto;
     padding: 0;
     transition: .6s ease;
+}
+header.sticky .nav-bar{
+    height: calc(2.5rem + 1rem);
 }
 
 .nav-bar .logo {
@@ -277,6 +283,64 @@ header {
     flex-direction: column;
 
 }
+
+/*======About section=====*/
+.about .container .content{
+    column-gap: 40px;
+    width: 100%;
+}
+.about-img{
+    max-width: 100%;
+    min-width: 500px;
+    border-radius: 10px;
+}
+.about-info .description{
+    max-width: 600px;
+
+}
+
+.about .description h3{
+    font-size: 2em;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.about-info .description h4{
+    font-size: 1.3em;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.about-info .description h4 span{
+    color: var(--second-color);
+}
+.about-info .description p{
+    color: var(--third-color);
+    font-size: var(--normal-font-size);
+    margin-bottom: 15px;
+    padding-bottom: 25px;
+    border-bottom: solid 2px var(--line-color);
+}
+.about-info .professional-list{
+    display: flex;
+    column-gap: 30px;
+}
+.about-info .professional-list .list-item h3{
+    font-size: 2.5em;
+    font-weight: 700;
+
+}
+.about-info .professional-list .list-item span{
+    color: var(--third-color);
+    font-size: var(--small-font-size);
+}
+
+/*======Skills section=====*/
+
+/*======Service section=====*/
+
+/*======Get-in-touch=====*/
+
+/*======Our  Clients=====*/
+
 
 /*======Scroll bar colors=====*/
 
