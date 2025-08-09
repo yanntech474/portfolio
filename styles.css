@@ -69,7 +69,19 @@ li {
 
 
 /*======Scroll bar=====*/
+::-webkit-scrollbar{
+    width: 10px;
+    background: var(--scroll-bar-color);
 
+}
+::-webkit-scrollbar-thumb{
+    background: var(--scroll-thumb-color);
+    border-radius: 2em;
+
+}
+::-webkit-scrollbar-thumb:hover{
+    background: var(--scroll-thumb-hover-color);
+}
 
 /*======Header=====*/
 header {
