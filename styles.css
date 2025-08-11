@@ -463,6 +463,38 @@ header.sticky .nav-bar{
 .bar .reseau::before{
     width: 85%;
 }
+.experience-card{
+    background: var(--card-bg-color);
+    border-bottom: 3px solid var(--second-color);
+    padding: 35px;
+    border-radius: 6px;
+    box-shadow: var(--box-shadoww);
+    transition: .3s ease;
+}
+.experience-card h3{
+    font-size: 1.3em;
+    font-weight: 700;
+}
+.experience-card h5{
+    font-size: var(--small-font-size);
+    font-weight: 500;
+    font-style: italic;
+}
+.experience-card span{
+    color: var(--third-color);
+
+}
+.experience-card .hr{
+    width: 100%;
+    height: 2px;
+    background: var(--line-color);
+    margin: 10px 0 22px;
+}
+.edu-list .item:hover, .bar:hover, .experience-card:hover{
+    transform: scale(1.03);
+}
+
+
 /*======Service section=====*/
 
 /*======Get-in-touch=====*/
