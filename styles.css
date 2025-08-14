@@ -269,7 +269,7 @@ header.sticky .nav-bar{
     margin-bottom: 2rem;
     background: linear-gradient(to top, transparent 0%, var(--first-color) 70%);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: #614fd0;
+    -webkit-text-fill-color: transparent;
     opacity: .1;
 }
 
@@ -302,9 +302,11 @@ header.sticky .nav-bar{
     width: 100%;
 }
 .about-img{
-    max-width: 100%;
-    min-width: 500px;
+    max-width: 80%;
+    min-width: 400px;
     border-radius: 10px;
+    height: auto;
+    display: block;
 }
 .about-info .description{
     max-width: 600px;
