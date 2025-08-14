@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 else {
                     cardsWithModal.classList.add("hidden");
                     setTimeout(() => {
-                        cardsWithModal.style.opacity = 1;
+                        cardsWithModal.style.opacity = 0;
                         cardsWithModal.style.transition = "0.5s ease";
                     }, 1);
                 }
