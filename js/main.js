@@ -59,6 +59,69 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+// Fonction pour gérer l'animation des modales
+const animateModal = (backdrop, modal, isOpening) => {
+    if (isOpening) {
+        backdrop.style.display = "flex";
+        backdrop.classList.add("active");
+        modal.style.transform = "scale(1)";
+        modal.style.opacity = "1";
+    } else {
+        backdrop.classList.remove("active");
+        setTimeout(() => {
+            backdrop.style.display = "none";
+            modal.style.transform = "scale(0)";
+            modal.style.opacity = "0";
+        }, 300);
+    }
+};
+
+// open and close portfolio modal
+const portfolioCardsWithModals = document.querySelectorAll(".portfolio-container .card-with-modal");
+
+portfolioCardsWithModals.forEach((portfolioCardWithModal) => {
+    const portfolioCard = portfolioCardWithModal.querySelector(".portfolio-card");
+    const portfolioBackdrop = portfolioCardWithModal.querySelector(".portfolio-modal-backdrop");
+    const portfolioModal = portfolioCardWithModal.querySelector(".portfolio-modal");
+    const modalCloseBtn = portfolioCardWithModal.querySelector(".modal-close-btn");
+
+    // Ouvrir la modale quand on clique sur la carte
+    portfolioCard.addEventListener("click", () => {
+        portfolioBackdrop.style.display = "flex";
+        portfolioBackdrop.classList.add("active");
+        portfolioModal.style.transform = "scale(1)";
+        portfolioModal.style.opacity = "1";
+    });
+
+    // Fermer la modale quand on clique sur le bouton fermer
+    modalCloseBtn.addEventListener("click", () => {
+        portfolioBackdrop.classList.remove("active");
+        setTimeout(() => {
+            portfolioBackdrop.style.display = "none";
+            portfolioModal.style.transform = "scale(0)";
+            portfolioModal.style.opacity = "0";
+        }, 300);
+    });
+
+    // Fermer la modale quand on clique en dehors
+    portfolioBackdrop.addEventListener("click", (e) => {
+        if (e.target === portfolioBackdrop) {
+            portfolioBackdrop.classList.remove("active");
+            setTimeout(() => {
+                portfolioBackdrop.style.display = "none";
+                portfolioModal.style.transform = "scale(0)";
+                portfolioModal.style.opacity = "0";
+            }, 300);
+        }
+    });
+
+    // Gestion des touches clavier
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && portfolioBackdrop.classList.contains("active")) {
+            animateModal(portfolioBackdrop, portfolioModal, false);
+        }
+    });
+});
 
 // Our clients - swiper
 

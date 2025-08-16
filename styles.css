@@ -736,7 +736,7 @@ header.sticky .nav-bar {
 }
 .portfolio-card {
     position: relative;
-    background: var(--card-bg-color);
+    background: var(--transparent-color-02); ;
     width: 350px;
     border-radius: 10px;
     cursor: pointer;
@@ -787,6 +787,105 @@ header.sticky .nav-bar {
 .portfolio-card:hover .card-info i{
     transform: scale(1);
 }
+.portfolio-modal-backdrop {
+    z-index: 9998;
+    position: fixed;
+    background: var(--bg-transparent-color);
+    backdrop-filter: blur(10px);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    overflow-y: auto;
+}
+.portfolio-modal-backdrop::-webkit-scrollbar {
+    background: var(--scroll-bar-color);
+    width: 8px;
+    border-radius: 5px;
+}
+.portfolio-modal-backdrop::-webkit-scrollbar-thumb {
+    background: var(--scroll-thumb-color);
+    border-radius: 5px;
+}
+.portfolio-modal-backdrop::-webkit-scrollbar-thumb:hover {
+    background: var(--scroll-thumb-hover-color);
+}
+
+.portfolio-modal{
+    position: relative;
+    background: var(--modal-bg-color);
+    max-width: 900px;
+    height: fit-content;
+    width: 90%;
+    margin: 75px 25px;
+    padding: 50px 45px;
+    border-radius: 10px;
+    box-shadow: var(--box-shadoww);
+    transform: translateY(-50px);
+    transition: .5s ease;
+}
+.portfolio-modal .modal-content{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 25px;
+
+}
+.portfolio-modal .modal-img{
+    width: 100%;
+}
+.portfolio-modal .modal-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.portfolio-modal .modal-close-btn {
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    cursor: pointer;
+}
+.portfolio-modal .modal-close-btn i {
+    color: var(--first-color);
+    font-size: 1.5em;
+}
+.portfolio-modal .modal-close-btn:hover i {
+    color: var(--second-color);
+}
+.portfolio-modal .modal-title {
+    font-size: 2em;
+    font-weight: 600;
+    color: var(--first-color);
+}
+.portfolio-modal .modal-description {
+    color: var(--third-color);
+    font-size: var(--normal-font-size);
+    margin-bottom: 20px;
+}
+.portfolio-modal .modal-links {
+    display: flex;
+    justify-content: center;
+    column-gap: 20px;
+}
+.portfolio-modal .modal-links a {
+    color: var(--second-color);
+    font-size: 1.2em;
+    font-weight: 500;
+    transition: .3s ease;
+    background: var(--transparent-color-01);
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+.portfolio-modal .modal-links a:hover {
+    color: var(--hover-color);
+    background: var(--transparent-color-02);
+}
+/*======Contact section=====*/
+.contact .container .content {}
+
 /*======Get-in-touch=====*/
 
 /*======Our  Clients=====*/
