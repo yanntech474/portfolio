@@ -88,14 +88,14 @@ portfolioCardsWithModals.forEach((portfolioCardWithModal) => {
     // Ouvrir la modale quand on clique sur la carte
     portfolioCard.addEventListener("click", () => {
         portfolioBackdrop.style.display = "flex";
-        portfolioBackdrop.classList.add("active");
+        portfolioBackdrop.classList.toggle("active");
         portfolioModal.style.transform = "scale(1)";
         portfolioModal.style.opacity = "1";
     });
 
     // Fermer la modale quand on clique sur le bouton fermer
     modalCloseBtn.addEventListener("click", () => {
-        portfolioBackdrop.classList.remove("active");
+        portfolioBackdrop.classList.toggle("active");
         setTimeout(() => {
             portfolioBackdrop.style.display = "none";
             portfolioModal.style.transform = "scale(0)";
@@ -106,7 +106,7 @@ portfolioCardsWithModals.forEach((portfolioCardWithModal) => {
     // Fermer la modale quand on clique en dehors
     portfolioBackdrop.addEventListener("click", (e) => {
         if (e.target === portfolioBackdrop) {
-            portfolioBackdrop.classList.remove("active");
+            portfolioBackdrop.classList.toggle("active");
             setTimeout(() => {
                 portfolioBackdrop.style.display = "none";
                 portfolioModal.style.transform = "scale(0)";

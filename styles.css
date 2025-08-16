@@ -784,9 +784,15 @@ header.sticky .nav-bar {
     transform: scale(0);
     transition: .3s ease;
 }
+.portfolio-card:hover {
+    transform: scale(1.05);
+}
 .portfolio-card:hover .card-info i{
     transform: scale(1);
+    color: var(--second-color);
+    
 }
+/* portfolio-modal-backdrop */
 .portfolio-modal-backdrop {
     z-index: 9998;
     position: fixed;
@@ -799,6 +805,13 @@ header.sticky .nav-bar {
     display: flex;
     justify-content: center;
     overflow-y: auto;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.3s ease ;
+}
+.portfolio-modal-backdrop.active {
+    opacity: 1;
+    visibility: visible;
 }
 .portfolio-modal-backdrop::-webkit-scrollbar {
     background: var(--scroll-bar-color);
@@ -823,15 +836,18 @@ header.sticky .nav-bar {
     padding: 50px 45px;
     border-radius: 10px;
     box-shadow: var(--box-shadoww);
-    transform: translateY(-50px);
-    transition: .5s ease;
+    transform: scale(0.8);
+    transition: transform .3s ease,opacity .3s ease;
+}
+.portfolio-modal-backdrop.active .portfolio-modal {
+    transform: scale(1);
+    opacity: 1;
 }
 .portfolio-modal .modal-content{
     display: flex;
     justify-content: center;
     flex-direction: column;
     row-gap: 25px;
-
 }
 .portfolio-modal .modal-img{
     width: 100%;
