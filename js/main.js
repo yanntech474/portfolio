@@ -122,6 +122,102 @@ portfolioCardsWithModals.forEach((portfolioCardWithModal) => {
         }
     });
 });
+// contact form validation
+document.addEventListener('DOMContentLoaded', () => {
+    const contactForm = document.getElementById('contact-form');
+    const formAlert = document.querySelector('.contact-form-alert');
+
+    // Fonction de validation des champs
+    const validateField = (field) => {
+        const value = field.value.trim();
+        let isValid = true;
+
+        // Validation spécifique par type de champ
+        switch(field.name) {
+            case 'name':
+                isValid = value.length >= 2 && /^[A-Za-z\s]+$/.test(value);
+                break;
+            case 'email':
+                isValid = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(value);
+                break;
+            case 'message':
+                isValid = value.length >= 10;
+                break;
+        }
+
+        // Mise à jour visuelle du champ
+        if (!isValid) {
+            field.classList.add('invalid');
+        } else {
+            field.classList.remove('invalid');
+        }
+
+        return isValid;
+    };
+
+    // Validation en temps réel
+    const inputs = contactForm.querySelectorAll('input, textarea');
+    inputs.forEach(input => {
+        input.addEventListener('input', () => validateField(input));
+        input.addEventListener('blur', () => validateField(input));
+    });
+
+    // Gestion de la soumission du formulaire
+    contactForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        
+        // Validation de tous les champs
+        let isFormValid = true;
+        inputs.forEach(input => {
+            if (!validateField(input)) {
+                isFormValid = false;
+            }
+        });
+
+        if (!isFormValid) {
+            showAlert('Please check all fields', 'error');
+            return;
+        }
+
+        try {
+            // Préparation des données
+            const formData = new FormData(contactForm);
+            const data = Object.fromEntries(formData);
+
+            // Simulation d'envoi (remplacer par votre API)
+            await new Promise(resolve => setTimeout(resolve, 1000));
+
+            // Affichage du succès
+            showAlert('Message sent successfully!', 'success');
+            contactForm.reset();
+
+        } catch (error) {
+            showAlert('Error sending message. Please try again.', 'error');
+        }
+    });
+
+    // Fonction d'affichage des alertes
+    const showAlert = (message, type) => {
+        formAlert.textContent = message;
+        formAlert.className = `contact-form-alert ${type}`;
+        formAlert.style.display = 'flex';
+        
+        // Animation d'apparition
+        requestAnimationFrame(() => {
+            formAlert.style.opacity = '1';
+            formAlert.style.transform = 'translateY(0)';
+        });
+
+        // Masquage automatique après 5 secondes
+        setTimeout(() => {
+            formAlert.style.opacity = '0';
+            formAlert.style.transform = 'translateY(-20px)';
+            setTimeout(() => {
+                formAlert.style.display = 'none';
+            }, 300);
+        }, 5000);
+    };
+});
 
 // Our clients - swiper
 

@@ -688,62 +688,106 @@
 
     <!--======Contact section======-->
     <section class="contact section" id="contact">
-        <div class="container flex-center">
-            <h1 class="section-title-01">Contact</h1>
-            <h2 class="section-title-02">Contact</h2>
-               <div class="section-content">
-                <div class="contact-container">
-                    <div class="contact-info">
-                        <h3>Contact info</h3>
-                         <p>Get In Touch</p>
-
-                        <ul class="contact-details">
-                            <li class="contact-item">
-                                <div class="contact-icon">
-                                <i class="fas fa-envelope"></i>
-                                </div>
-                                <div class="contact-method">
-                                    <span>Email</span>
-                                    <h4>contact@yannodevops.fr</h4>
-                                    <a href="mailto:someone@exemple.com" target="_blank"><span>send <i class="fa-regular fa-paper-plane"></i></span></a>
-                                </div>
+    <div class="container flex-center">
+        <h1 class="section-title-01">Contact</h1>
+        <h2 class="section-title-02">Contact</h2>
+        <div class="section-content">
+            <!-- Contact Container -->
+            <div class="contact-container">
+                <!-- Contact Info -->
+                <div class="contact-info">
+                    <h3>Contact info</h3>
+                     <p>Get In Touch</p>
+                    <ul class="contact-details">
+                        <li class="contact-item">
+                            <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-method">
+                                <span>Email</span>
+                                <h4>contact@yannodevops.fr</h4>
+                                <a href="mailto:contact@yannodevops.fr" target="_blank">
+                                    <span>send <i class="fa-solid fa-up-right-and-down-left-from-center"></i></span>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-method">
+                                <span>Phone</span>
+                                <h4>+33 6 12 34 56 78</h4>
+                                <a href="tel:+33612345678" target="_blank"><span>send <i class="fa-solid fa-up-right-and-down-left-from-center"></i></span></a>
                             </li>
-                            <li class="contact-item">
-                                <div class="contact-icon">
-                                    <i class="fas fa-phone"></i>
-                                </div>
-                                <div class="contact-method">
-                                    <span>Phone</span>
-                                    <h4>+33 6 12 34 56 78</h4>
-                                    <a href="tel:+33612345678" target="_blank"><span>call <i class="fa-solid fa-phone"></i></span></a>
-                                </div>
-                            </li>
-                            <li class="contact-item">
-                                <div class="contact-icon">
-                                    <i class="fa-brands fa-linkedin"></i>
-                                </div>
-                                <div class="contact-method">
-                                    <span>LinkedIn</span>
-                                    <h4>Ekongue</h4>
-                                    <a href="#" target="_blank"><span>LinkedIn <i class="fa-brands fa-linkedin"></i></span></a>
-                                </div
-                            </li>
-                            <li class="contact-item">
-                                <div class="contact-icon">
-                                    <i class="fa-brands fa-github"></i>
-                                </div>
-                                <div class="contact-method">
-                                    <span>GitHub</span>
-                                    <h4>yanntech474</h4>
-                                    <a href="#" target="_blank"><span>GitHub <i class="fa-brands fa-github"></i></span></a>
-                                </div>
-                            </li>
-
-                        </ul>
-                        
+                        <li class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </div>
+                            <div class="contact-method">
+                                <span>Whatsapp</span>
+                                <h4>+33 612345678</h4>
+                                <a href="https://wa.me/33612345678" target="_blank">
+                                    <span>send <i class="fa-solid fa-up-right-and-down-left-from-center"></i></span>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                    <h3>Social info</h3>
+                    <ul class="contact-social-links">
+                        <li><a href="#" target="_blank" aria-label="Facebook"><i class="fa-brands fa-square-facebook"></i></a></li>
+                        <li><a href="#" target="_blank" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a></li>
+                        <li><a href="#" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
+            
+                <!-- Contact Form -->
+                <div class="contact-form-container">
+                    <h2>Let's work <span>together.</span></h2>
+                    <p>Feel free to reach out to me for any inquiries, collaborations, or just to say hello!</p>
+                    <form action="" method="POST" id="contact-form" novalidate>
+    <div class="input-group">
+        <input type="text" 
+               name="name" 
+               id="name" 
+               placeholder="Your Name" 
+               required 
+               minlength="2"
+               pattern="[A-Za-z\s]+"
+               aria-label="Your Name">
+    </div>
+    <div class="input-group">
+        <input type="email" 
+               name="email" 
+               id="email" 
+               placeholder="Your Email" 
+               required
+               pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+               aria-label="Your Email">
+    </div>
+    <div class="input-group">
+        <textarea name="message" 
+                  id="message" 
+                  placeholder="Your Message" 
+                  required
+                  minlength="10"
+                  aria-label="Your Message"></textarea>
+    </div>
+    <div class="input-group send-message">
+                            <button type="submit" class="btn main-btn fill-btn submit-btn">
+                                Send Message
+                            </button>
+                        </div>
+                        <div class="contact-form-alert">
+                            <span>Your message has been sent successfully!</span>
+                            <i class="fa-solid fa-square-check"></i>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
+    </div>
+</section>
     <!--======Footer======-->
 
 
