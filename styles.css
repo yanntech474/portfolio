@@ -850,7 +850,7 @@ header.sticky .nav-bar {
     row-gap: 25px;
 }
 .portfolio-modal .modal-img{
-    width: 100%;
+    width: 80%;
 }
 .portfolio-modal .modal-img img {
     width: 100%;
@@ -900,7 +900,8 @@ header.sticky .nav-bar {
     background: var(--transparent-color-02);
 }
 /*======Contact section=====*/
-.contact .container .content {}
+
+
 
 /*======Get-in-touch=====*/
 
