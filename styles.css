@@ -785,6 +785,39 @@ header.sticky .nav-bar {
 .portfolio-card:hover .card-info i{
     transform: scale(1);
 }
+/* Modal configuration */
+.portfolio-modal {
+    z-index: 9998;
+    position: fixed;
+    width: 100%;
+    height: 100vh; 
+    top: 0;
+    left: 0;
+    background: var(--bg-transparent-color);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    overflow-y: auto;
+}
+.portfolio-modal{
+    position: relative;
+    background: var(--modal-bg-color);
+    max-width: 900px;
+    margin: 75px 25px;
+    width: 90%;
+    height: fit-content;
+    padding: 50px 45px;
+    border-radius: 15px;
+    box-shadow: var(--box-shadoww);
+    transform: translateY(-50px);
+    transition: .5s ease;
+}
+.portfolio-modal .modal-content{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 25px;
+   }
 /*======Get-in-touch=====*/
 
 /*======Our  Clients=====*/
