@@ -11,9 +11,15 @@
 
 <body>
     <!--======Scroll to top button======-->
-
+    <div class="scrollToTop-btn flex-center">
+        <i class="fas fa-arrow-up"></i>
+    </div>
     <!--======Light/Dark theme button to top button======-->
+    <div class="theme-btn">
+        <i class="fas fa-moon"></i>
+        <i class="fas fa-sun"></i>
 
+    </div>
     <!--======Header======-->
     <header>
         <div class="nav-bar">
@@ -22,14 +28,16 @@
                     <</span>Yanick-Ekongué<span style="color: rgb(0, 28, 85);">/></span></a>
             <div class="navigation">
                 <div class="nav-items">
-                    <a href="#home">Home</a>
+                    <div class="nav-close-btn"></div>
+                    <a class="active" href="#home">Home</a>
                     <a href="#about">About</a>
                     <a href="#skills">Skills</a>
                     <a href="#services">Services</a>
                     <a href="#portfolio">Portfolios</a>
-                    <a href="#contact">contact</a>
+                    <a href="#contact">Contact</a>
                 </div>
             </div>
+            <div class="nav-menu-btn"></div>
         </div>
 
     </header>
@@ -56,52 +64,52 @@
         <a href="#about" class="scroll-down">Scroll-Down<i class="fas fa-arrow-down"></i>
     </section>
     <!--======About section======-->
-    <section class="about section" id="about" aria-labelledby="about-title">
-    <div class="container flex-center">
-        <h1 class="section-title-01" id="about-title">About Me</h1>
-        <h2 class="section-title-02">About Me</h2>
-        <div class="content flex-center">
-            <div class="about-img">
-                <img src="images/about.png" 
-                     alt="Yanick Ekongué profile picture"
-                     loading="lazy">
-            </div>
-            <div class="about-info">
-                <div class="description">
-                    <h3>I am a seasoned professional</h3>
-                    <h4>with a strong background as a <span>PMO</span> and <span>Data Analyst</span>.
-                        Currently transitioning into <span>Cloud Computing</span> and <span>DevOps</span>
-                    </h4>
-                    <p>
-                        I aim to leverage my skills to support small to medium-sized enterprises,
-                        fostering strong social connections with their teams.
-                        With experience in complex and dynamic environments,
-                        I am committed to broadening my horizons and actively
-                        contributing to the success of technological and organizational
-                        projects
-                    </p>
+    <section class="about section" id="about">
+        <div class="container flex-center">
+            <h1 class="section-title-01">About Me</h1>
+            <h2 class="section-title-02">About Me</h2>
+            <div class="content flex-center">
+                <div class="about-img">
+                    <img src="images/about.png" 
+                         alt="Yanick Ekongué profile picture"
+                         loading="lazy">
                 </div>
+                <div class="about-info">
+                    <div class="description">
+                        <h3>I am a seasoned professional</h3>
+                        <h4>with a strong background as a <span>PMO</span> and <span>Data Analyst</span>.
+                            Currently transitioning into <span>Cloud Computing</span> and <span>DevOps</span>
+                        </h4>
+                        <p>
+                            I aim to leverage my skills to support small to medium-sized enterprises,
+                            fostering strong social connections with their teams.
+                            With experience in complex and dynamic environments,
+                            I am committed to broadening my horizons and actively
+                            contributing to the success of technological and organizational
+                            projects
+                        </p>
+                    </div>
                     <ul class="professional-list" aria-label="Professional achievements">
-                    <li class="list-item">
-                        <h3><span class="number">10+</span></h3>
-                        <span class="achievement">Years in <br> IT</span>
-                    </li>
-                    <li class="list-item">
-                        <h3><span class="number">100+</span></h3>
-                        <span class="achievement">IT Projects <br>Delivered</span>
-                    </li>
-                    <li class="list-item">
-                        <h3><span class="number">150+</span></h3>
-                        <span class="achievement">Satisfied <br>Clients</span>
-                    </li>
-                </ul>
-                <a href="cv/CV.pdf" 
-                   download="Yanick_Ekongue_CV.pdf" 
-                   target="_blank" 
-                   class="btn"
-                   aria-label="Download CV">
-                    Download CV <i class="fas fa-download" aria-hidden="true"></i>
-                </a>
+                        <li class="list-item">
+                            <h3><span class="number">10+</span></h3>
+                            <span class="achievement">Years in <br> IT</span>
+                        </li>
+                        <li class="list-item">
+                            <h3><span class="number">100+</span></h3>
+                            <span class="achievement">IT Projects <br>Delivered</span>
+                        </li>
+                        <li class="list-item">
+                            <h3><span class="number">150+</span></h3>
+                            <span class="achievement">Satisfied <br>Clients</span>
+                        </li>
+                    </ul>
+                    <a href="cv/CV.pdf" 
+                       download="Yanick_Ekongue_CV.pdf" 
+                       target="_blank" 
+                       class="btn"
+                       aria-label="Download CV">
+                        Download CV <i class="fas fa-download" aria-hidden="true"></i>
+                    </a>
                 </div>
             </div>
         </div>
