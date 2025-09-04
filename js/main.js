@@ -124,7 +124,7 @@ portfolioCardsWithModals.forEach((portfolioCardWithModal) => {
 });
 // contact form validation
 document.addEventListener('DOMContentLoaded', () => {
-    const contactForm = document.getElementById('.contact-form');
+    const contactForm = document.getElementById('contact-form');
     const formAlert = document.querySelector('.contact-form-alert');
 
     // Fonction de validation des champs
