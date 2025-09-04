@@ -11,9 +11,15 @@
 
 <body>
     <!--======Scroll to top button======-->
-
+    <div class="scrollToTop-btn flex-center">
+        <i class="fas fa-arrow-up"></i>
+    </div>
     <!--======Light/Dark theme button to top button======-->
+    <div class="theme-btn">
+        <i class="fas fa-moon"></i>
+        <i class="fas fa-sun"></i>
 
+    </div>
     <!--======Header======-->
     <header>
         <div class="nav-bar">
@@ -22,14 +28,16 @@
                     <</span>Yanick-Ekongué<span style="color: rgb(0, 28, 85);">/></span></a>
             <div class="navigation">
                 <div class="nav-items">
-                    <a href="#home">Home</a>
+                    <div class="nav-close-btn"></div>
+                    <a class="active" href="#home">Home</a>
                     <a href="#about">About</a>
                     <a href="#skills">Skills</a>
                     <a href="#services">Services</a>
                     <a href="#portfolio">Portfolios</a>
-                    <a href="#contact">contact</a>
+                    <a href="#contact">Contact</a>
                 </div>
             </div>
+            <div class="nav-menu-btn"></div>
         </div>
 
     </header>
@@ -38,7 +46,7 @@
     <section class="home flex-center" id="home">
         <div class="home-container">
             <div class="media-icons">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
                 <a href="#"><i class="fab fa-instagram"></i></a>
                 <a href="#"><i class="fab fa-twitter"></i></a>
             </div>
@@ -53,7 +61,7 @@
                 <img src="images/bg-2.png" alt="">
             </div>
         </div>
-        <a href="#about" class="scroll-down">Scroll-Down<i class="fas fa-arrow-down"></i>
+        <a href="#about" class="scroll-down">Scroll-Down<i class="fas fa-arrow-down"></i></a>
     </section>
     <!--======About section======-->
    <section class="about section" id="about">
@@ -62,36 +70,39 @@
             <h2 class="section-title-02">About Me</h2>
             <div class="content flex-center">
                 <div class="about-img">
-                    <img src="images/about.png" alt="About Me">
+                    <img src="images/about.png" alt="">
                 </div>
                 <div class="about-info">
                     <div class="description">
                         <h3>I am a seasoned professional</h3>
                         <h4>with a strong background as a <span> PMO </span> and <span> Data Analyst</span>.
-                            Currently transitioning into <span>Cloud Computing </span> and <span> DevOps</span>,
+                            Currently transitioning into <span>Cloud Computing </span> and<span> DevOps</span>,
                         </h4>
-                        <p>I aim to leverage my skills to support small to medium-sized enterprises,
+                        <p>
+                            I aim to leverage my skills to support small to medium-sized enterprises,
                             fostering strong social connections with their teams.
                             With experience in complex and dynamic environments,
                             I am committed to broadening my horizons and actively
                             contributing to the success of technological and organizational
-                            projects</p>
+                            projects
+                        </p>
                     </div>
-                    <ul class="professional-list">
+                    <ul class="professional-list" aria-label="Professional achievements">
                         <li class="list-item">
-                            <h3>5+</h3>
-                            <span>Years of <br> Experience</span>
+                            <h3><span class="number">10+</span></h3>
+                            <span class="achievement">Years in <br> IT Experience</span>
                         </li>
                         <li class="list-item">
                             <h3>3k+</h3>
-                            <span>Happy <br> Customers</span>
+                            <span>Happy <br>Customers</span>
                         </li>
                         <li class="list-item">
                             <h3>5+</h3>
-                            <span>Success <br> Projects</span>
+                            <span>Success <br>Projects</span>
                         </li>
                     </ul>
-                    <a href="/cv/CV.pdf" download="/cv/CV.pdf" class="btn">Download CV <i class="fas fa-download"></i></a>
+                    <a href="/cv/CV.pdf" download="/cv/CV.pdf" class="btn">Download CV <i
+                            class="fas fa-download"></i></a>
                 </div>
             </div>
         </div>
@@ -488,7 +499,7 @@
                                 <div class="card-info">
                                     <span>College web application</span>
                                     <h4>A responsive website built using HTML, CSS, and JavaScript.</h4>
-                                    <i class="fas fa-arrow-up card-btn"></i>
+                                    <i class="fas fa-long-arrow-right card-btn"></i>
                                 </div>
                             </div>
                             <!-- Begin portfolio-modal -->
@@ -695,7 +706,7 @@
     <div class="container flex-center">
         <h1 class="section-title-01">Contact</h1>
         <h2 class="section-title-02">Contact</h2>
-        <div class="section-content">
+        
             <!-- Contact Container -->
             <div class="contact-container">
                 <!-- Contact Info -->
@@ -788,7 +799,7 @@
                     </form>
                 </div>
             </div>
-        </div>
+        
     </div>
 </section>
     <!--======Footer======-->
@@ -811,12 +822,15 @@
             </ul>
         </div>
         <div class="hr"></div>
-        <h3>Follow</h3>
+        <div class="follow group">
+             <h3>Follow</h3>
         <ul>
             <li><a href="#" target="_blank" aria-label="Facebook"><i class="fa-brands fa-square-facebook"></i></a></li>
             <li><a href="#" target="_blank" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a></li>
             <li><a href="#" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a></li>
         </ul>
+        </div>
+       
        </div>
        <div class="footer-copyright group">
             <p>&copy; 2023 Yanick Ekongué. All rights reserved.</p>
