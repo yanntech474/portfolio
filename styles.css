@@ -90,7 +90,6 @@ body {
     background: var(--body-bg-color);
     margin: 2rem 0 0 0;
     transition: .5s ease;
-
 }
 
 a {
@@ -369,18 +368,18 @@ header.sticky .nav-bar {
 
 .section {
     position: relative;
-    width: 1150px;
+    max-width: 1150px;
     margin-left: auto;
     margin-right: auto;
-    padding: 6rem 2rem 2rem;
+    padding: 4rem 2rem 2rem;
 }
 
 .sub-section {
     position: relative;
-    width: 1150px;
+    max-width: 1150px;
     margin-left: auto;
     margin-right: auto;
-    padding: 6rem 0;
+    padding: 4rem 0;
 }
 
 .section-title-01 {
@@ -1522,7 +1521,23 @@ footer a {
         justify-content: center;
         align-items: center;
         background: var(--transparent-color-01);
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0s, opacity 0.5s linear;
+        z-index: 9999;
+        backdrop-filter: blur(20px);
 
+    }
+
+    .navigation.active {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .nav-bar .logo {
+        color: var(--first-color);
+        font-size: 1.8em;
+        font-weight: 600;
     }
 
     .nav-items {
@@ -1538,8 +1553,12 @@ footer a {
         padding: 40px;
         border-radius: 10px;
         box-shadow: var(--box-shadoww);
-        transform: scale(0);
+        transform: translateY(-50px);
         transition: .5s ease;
+    }
+
+    .navigation.active .nav-items {
+        transform: translateY(0);
     }
 
     .nav-items a {
@@ -1548,7 +1567,7 @@ footer a {
 
     .nav-close-btn {
         position: absolute;
-        background: url(../portfolio/images/close-btn.png) no-repeat;
+        background: url(../portfolio/images/close-btn.webp) no-repeat;
         filter: var(--color-filter);
         background-size: 12px;
         background-position: center;
@@ -1561,7 +1580,7 @@ footer a {
     }
 
     .nav-menu-btn {
-        background: url(../portfolio/images/menu.png) no-repeat;
+        background: url(../portfolio/images/menu2.webp) no-repeat;
         filter: var(--color-filter);
         background-size: 30px;
         background-position: center;
@@ -1571,4 +1590,283 @@ footer a {
         display: block;
 
     }
+
+    /*===== Home section ===== */
+    .home {
+    position: relative;
+    max-width: 1250px;
+    min-height: 60vh;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 4rem 2rem;
+    flex-direction: column;
+    margin-bottom: 16px;
+}
+    .home .home-container .info {
+        /* flex-direction: column-reverse; */
+        font-size: 0.85rem;
+    }
+
+    .home .home-container .info h3 {
+        font-size: 0.85em;
+        line-height: 35px;
+    }
+
+    .home .home-container {
+        flex-direction: row;
+    }
+
+    .home .media-icons {
+        flex-direction: column;
+        margin: 0 20px 0 0;
+    }
+
+    .home .media-icons a {
+        font-size: 1.2em;
+        margin: 8px 0;
+    }
+
+    .home .home-container .info h2 {
+        font-size: 1.5em;
+        line-height: 45px;
+    }
+
+    .home .home-container .info p {
+        font-size: 1em;
+        max-width: 400px;
+    }
+
+    .home .home-container .home-img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 500px;
+        min-width: 200px;
+        margin: 0 auto;
+    }
+
+    .home .home-container .home-img img {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        max-height: 100;
+        object-fit: cover;
+    }
+
+    /*===== about section ===== */
+    .about .container .content {
+        display: grid;
+        width: 100%;
+        /* grid-template-columns: 2fr; */
+        row-gap: 40px;
+    }
+    .about-img {
+        max-width: 100%;
+        min-width: 0;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+    .about-info{
+        min-width: 0;
+        width: 100%;
+    }
+    .about-info .professional-list{
+        flex-wrap: wrap;
+        justify-content: start;
+    }
+    /*===== Portfolio section ===== */
+    .portfolio-container {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        column-gap: 25px;
+        row-gap: 25px;
+    }
+    .portfolio-card {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+    .portfolio-card .card-img {
+        height: 150px;
+        width: 100%;
+    } 
+    .portfolio-description h3 {
+        font-size: 1em;
+        margin-bottom: 30px;
+    }
+ /*===== contact section ===== */
+    .contact-container {
+        flex-direction: column;
+        row-gap: 50px;
+    }
+    .contact .contact-info {
+        max-width: 100%;
+        width: 100%;
+        text-align: center;
+    }
+    .contact-form-container {
+        padding: 30px 20px;
+    }
+    .contact-form-container h2 {
+        font-size: 1.2em;
+        margin-bottom: 20px;
+    }
+    .contact-form-container p {
+        font-size: 1em;
+        margin-bottom: 20px;
+    }
+       .contact-form-container form{
+        row-gap: 15px;
+       }
+    .contact-form-container form .input-group button {
+        width: 100%;
+    }
+    /*===== footer section ===== */
+    .footer-container {
+        flex-direction: column;
+        row-gap: 30px;
+        text-align: center;
+    }
+    .footer .about h2 {
+        font-size: 1.2em;
+    }
+
+}
+/* Media Queries pour la réactivité */
+@media screen and (max-width: 750px) {
+
+    /*===== Header navigation menu ===== */
+    .nav-items {
+        width: 90%;
+        max-width: 90%;
+        padding: 30px;
+    }
+
+    .nav-items a {
+        margin: 15px 20px;
+    }
+
+    /*===== Home section ===== */
+    .home .home-container {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .home .media-icons {
+        flex-direction: row;
+        margin: 20px 0 0 0;
+    }
+
+    .home .media-icons a {
+        font-size: 1.2em;
+        margin: 0 10px;
+    }
+
+    .home .home-container .info h2 {
+        font-size: 1.8em;
+        line-height: 35px;
+    }
+
+    .home .home-container .info h3 {
+        font-size: 1.2em;
+        line-height: 30px;
+    }
+
+    .home .home-container .info p {
+        font-size: 1em;
+        max-width: 100%;
+    }
+
+    .home .home-container .home-img {
+        max-width: 400px;
+        min-width: 0;
+        margin: 0 auto;
+    }
+
+    .home .home-container .home-img img {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: cover;
+    }
+
+    /*===== about section ===== */
+    .about .container .content {
+        display: grid;
+        width: 100%;
+        /* grid-template-columns: 2fr; */
+        row-gap: 40px;
+    }
+    .about-img {
+        max-width: 100%;
+        min-width: 0;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+    .about-info{
+        min-width: 0;
+        width: 100%;
+    }
+    .about-info .professional-list{
+        flex-wrap: wrap;
+        justify-content: start;
+    }
+    /*===== Portfolio section ===== */
+    .portfolio-container {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        column-gap: 25px;
+        row-gap: 25px;
+    }
+    .portfolio-card {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+    .portfolio-card .card-img {
+        height: 150px;
+        width: 100%;
+    }
+    .portfolio-description h3 {
+        font-size: 1em;
+        margin-bottom: 30px;
+    }
+    /*===== contact section ===== */
+    .contact-container {
+        flex-direction: column;
+        row-gap: 50px;
+    }
+    .contact .contact-info {
+        max-width: 100%;
+        width: 100%;
+        text-align: center;
+    }
+    .contact-form-container {
+        padding: 30px 20px;
+    }
+    .contact-form-container h2 {
+        font-size: 1.2em;
+        margin-bottom: 20px;
+    }
+    .contact-form-container p {
+        font-size: 1em;
+        margin-bottom: 20px;
+    }
+       .contact-form-container form{
+        row-gap: 15px;
+       }
+    .contact-form-container form .input-group button {
+        width: 100%;
+    }
+    /*===== footer section ===== */
+    .footer-container {
+        flex-direction: column;
+        row-gap: 30px;
+        text-align: center;
+    }   
+    .footer .about h2 {
+        font-size: 1.2em;
+    }  
+    
 }
