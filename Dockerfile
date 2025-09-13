@@ -31,17 +31,23 @@ VOLUME ["/etc/letsencrypt"]
 ENTRYPOINT ["/start.sh"]
 # Phase 3 : Serveur Nginx final
 FROM nginx:alpine
+LABEL maintainer="ekongué yanick"
+WORKDIR /usr/share/nginx/portfolio
 
-# Copie de la configuration et des fichiers nécessaires
-COPY --from=app_configurator /etc/nginx/conf.d/default.conf /etc/nginx/conf.d/default.conf
-COPY --from=app_configurator /usr/share/nginx/html /usr/share/nginx/html
-COPY --from=app_configurator /start.sh /start.sh
-# Déclaration du volume pour les certificats SSL
-VOLUME ["/etc/letsencrypt"]
+# Installation des dépendances
+RUN apk update && apk add bash \
+apk add --no-cache python3 py3-pip && \
+    pip3 install --no-cache-dir certbot-nginx
 
-RUN chmod +x /start.sh
-
-EXPOSE 80 443
-
-ENTRYPOINT ["/start.sh"]
+# Création du répertoire pour Let's Encrypt
+RUN mkdir -p /etc/letsencrypt
+# Copy the nginx configuration file
+COPY yannoportfolio.com /etc/nginx/yannoportfolio.com
+# Copy the local portfolio files to the nginx html directory
+COPY . /usr/share/nginx/portfolio
+# Expose les ports 80 et 443
+EXPOSE 80  443
+# Command to obtain SSL certificates (uncomment and modify the email and domain as needed)
+# RUN certbot --nginx -m
+# Start nginx in the foreground
 CMD ["nginx", "-g", "daemon off;"]
