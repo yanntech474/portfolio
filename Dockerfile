@@ -34,9 +34,10 @@ FROM nginx:alpine
 
 # Copie de la configuration et des fichiers nécessaires
 COPY --from=app_configurator /etc/nginx/conf.d/default.conf /etc/nginx/conf.d/default.conf
-COPY --from=app_configurator /etc/letsencrypt /etc/letsencrypt
 COPY --from=app_configurator /usr/share/nginx/html /usr/share/nginx/html
 COPY --from=app_configurator /start.sh /start.sh
+# Déclaration du volume pour les certificats SSL
+VOLUME ["/etc/letsencrypt"]
 
 RUN chmod +x /start.sh
 
