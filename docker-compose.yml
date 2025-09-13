@@ -9,7 +9,7 @@ services:
       - "443:443"
     volumes:
       - myletsencryptcert:/etc/letsencrypt
-      - ./portfolio /sr/share/nginx/html # Ensure your HTML files are in the current directory
+      - ./portfolio:/usr/share/nginx/html # Ensure your HTML files are in the current directory
     restart: always
 
   certbot:
@@ -17,7 +17,7 @@ services:
     container_name: certbot
     volumes:
       - myletsencryptcert:/etc/letsencrypt
-      - ./html:/usr/share/nginx/html
+      - ./portfolio:/usr/share/nginx/html
     entrypoint: >
       sh -c "certbot certonly --webroot -w /usr/share/nginx/html
       --email tonemail@example.com --agree-tos --no-eff-email
