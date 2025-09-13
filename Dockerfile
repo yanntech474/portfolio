@@ -12,7 +12,3 @@ EXPOSE 80
 # Start nginx in the foreground
 CMD ["nginx", "-g", "daemon off;"]
 # Expose port 80
-EXPOSE 80   
-# Start nginx in the foreground
-CMD ["nginx", "-g", "daemon off;"]
-# Set the working directory
