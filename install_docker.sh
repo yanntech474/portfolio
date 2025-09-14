@@ -1,4 +1,4 @@
-#!bin/bash
+#!/bin/bash
 # Script to install Docker and Docker Compose on a Linux system
 # Run this script with superuser privileges
 # Example: sudo ./install_docker.sh
@@ -44,3 +44,10 @@
 
         docker --version
         docker-compose --version
+# or execute comaande  sudo apt install docker.io -y
+        echo "---------------------------------------------"
+        echo "You may need to log out and log back in for group changes to take effect."
+        echo "---------------------------------------------"
+        echo "Rebooting the system in 10 seconds..."
+        sleep 10
+        sudo reboot     
